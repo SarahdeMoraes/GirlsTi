@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encontro Meninas TI</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Firebase SDK compatível com navegador (V8) -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDHpv1f1O62AG9GNfLQoZ0zs-quObgGtbg",
+      authDomain: "encontromeninasti.firebaseapp.com",
+      databaseURL: "https://encontromeninasti-default-rtdb.firebaseio.com",
+      projectId: "encontromeninasti",
+      storageBucket: "encontromeninasti.appspot.com",
+      messagingSenderId: "328603690866",
+      appId: "1:328603690866:web:b08b164a65ba02865b9feb"
+    };
+
+    // Inicializa Firebase V8
+    firebase.initializeApp(firebaseConfig);
+    window.database = firebase.database();
+  </script>
+
+  <script defer src="script.js"></script>
+
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Você vai vir para o encontro das meninas em TI?</h1>
+    <h2>24/04 - Sábado</h2>
+
+    <input type="text" id="nome" placeholder="Digite seu nome" />
+    <button id="yes">Sim</button>
+    <button id="no" onmouseenter="fuga()" onclick="fuga()">Não</button>
+  </div>
+
+  <audio id="audio">
+    <source src="crowd-cheer-ii-6263.mp3" />
+  </audio>
+</body>
+</html>
